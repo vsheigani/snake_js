@@ -1,0 +1,43 @@
+/**Program Name:       	  snake.js
+ * Developer:             Vahid Sheigani
+ * Date Developed:      	April 4, 2017
+ * Date uploaded:         June 14, 2017
+*/
+
+
+/** Purpose: Snake game developed using simple javascript
+            concepts and basic methods. Developed on the base of
+            Vingesh post in the the following link:
+            https://codereview.stackexchange.com/questions/55323/snake-game-with-canvas-element-code
+            with Major changes and so many features added
+*/
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Snake Game</title>
+  <link type="text/css" rel="stylesheet" href="styles/snake.css">
+  <script src="scripts/snake.js" defer></script>
+
+</head>
+<body>
+  <audio id="soundTrack" src="sounds/bloopy.mp3" preload="auto"></audio><!--Music objects for javascript-->
+  <audio id="hit" src="sounds/grow.mp3" preload="auto"></audio>
+  <audio id="death" src="sounds/gameOver.mp3" preload="auto"></audio>
+  <audio id="win" src="sounds/ending.mp3" preload="auto"></audio>
+  <canvas width="1830" height="600" id="canvas" style="background: url()">
+  </canvas>
+  <div id="controls">
+    <input type="text" id="speedTxt" value="150"><label id="lbwarn" style="color:yellow;">Wrong Number, Please enter a number between 1 and 250.</label><br>
+    <input type="button" id="changeBtn" value="Change Speed" onclick="changeSpeed();"><br>
+    <input type="button" id="playBtn" value="Play" onClick="playPause(); music();">
+    <input type="button" id="restartBtn" value="Restart" onClick="restartGame();">
+    <br/><br/>
+    <div id="scor">
+      Score :
+      <span id="scoreCount">0</span>
+    </div>
+  </div>
+</body>
+</html>
